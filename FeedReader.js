@@ -1,3 +1,5 @@
+
+import {filterFeeds,listedUrls} from "./Global.js"
 const processContainerContent = (item) => {
   var newItem = { data: "", toSave: false };
 
