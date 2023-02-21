@@ -42,10 +42,8 @@ userFeedURLs.forEach((userUrl) => {
           if (count % 2 == 0)
             maincontent.insertAdjacentHTML("beforeend", newItem.data);
           else rcontent.insertAdjacentHTML("beforeend", newItem.data);
-
-          if (newItem.toSave)
-            sessionStorage.setItem(userUrl.Name, JSON.stringify(newItem.data));
         });
+        sessionStorage.setItem(userUrl.Name, JSON.stringify(data));
       },
       error: function (error) {
         console.log(JSON.stringify(error));
