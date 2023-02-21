@@ -38,13 +38,13 @@ userFeedURLs.forEach((userUrl) => {
         //  sessionStorage.setItem(userUrl.Name, JSON.stringify(data));
         data.items.map((item) => {
           count += 1;
-          var newItem = processContainerContent(data);
+          var newItem = processContainerContent(item);
           if (count % 2 == 0)
             maincontent.insertAdjacentHTML("beforeend", newItem.data);
           else rcontent.insertAdjacentHTML("beforeend", newItem.data);
 
           if (newItem.toSave)
-            sessionStorage.setItem(userUrl.Name, JSON.stringify(data));
+            sessionStorage.setItem(userUrl.Name, JSON.stringify(newItem.data));
         });
       },
       error: function (error) {
